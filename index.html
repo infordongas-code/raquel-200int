@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8f3156">
+  <meta name="description" content="Conheça a coleção de maquiagem Bella Glow: batons, bases, blushes e muito mais.">
+  <title>Bella Glow | Beleza do seu jeito</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">BELEZA QUE COMBINA COM VOCÊ <span>✦</span> DESCOBRa SUA PRÓXIMA FAVORITA</div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Bella Glow - início"><span class="brand-mark">BG</span><span>Bella <strong>Glow</strong></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#inicio">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Nossa essência</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="cart-button" id="openCart" aria-label="Abrir carrinho">Sacola <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">SUA BELEZA, SUAS REGRAS</p>
+        <h1>Realce o que<br>faz <em>você brilhar.</em></h1>
+        <p class="hero-description">Texturas incríveis, cores apaixonantes e pequenos detalhes que deixam sua rotina mais especial.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#produtos">Explorar produtos <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#sobre">Conheça a Bella Glow</a>
+        </div>
+        <div class="hero-note"><span class="sparkle">✦</span><div><strong>Beleza para todos os dias</strong><small>Do look natural ao mais marcante.</small></div></div>
+      </div>
+      <div class="hero-visual" aria-label="Produtos de maquiagem em tons rosados" role="img">
+        <div class="hero-circle"></div>
+        <div class="hero-image"></div>
+        <div class="hero-sticker"><span>MAKE</span><strong>IT<br>GLOW</strong><small>✨</small></div>
+        <div class="hero-caption"><span>01 / 04</span><span>COLEÇÃO ESSÊNCIA</span></div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Diferenciais">
+      <div><span class="benefit-icon">✧</span><p><strong>Produtos selecionados</strong><small>Para a sua rotina de beleza</small></p></div>
+      <div><span class="benefit-icon">♡</span><p><strong>Beleza sem regras</strong><small>Seu estilo, sua expressão</small></p></div>
+      <div><span class="benefit-icon">✦</span><p><strong>Detalhes que encantam</strong><small>Cor, textura e personalidade</small></p></div>
+    </section>
+
+    <section class="products-section section-wrap" id="produtos">
+      <div class="section-heading">
+        <div><p class="eyebrow">ESCOLHIDOS PARA VOCÊ</p><h2>Seus novos <em>favoritos</em></h2></div>
+        <p>Encontre aquele toque especial para completar sua maquiagem.</p>
+      </div>
+      <div class="shop-tools">
+        <div class="filter-list" role="group" aria-label="Filtrar produtos">
+          <button class="filter-chip active" data-filter="todos">Todos</button>
+          <button class="filter-chip" data-filter="rosto">Rosto</button>
+          <button class="filter-chip" data-filter="labios">Lábios</button>
+          <button class="filter-chip" data-filter="olhos">Olhos</button>
+        </div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="productSearch" placeholder="Buscar produto..." aria-label="Buscar produto"></label>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite">
+        <!-- Os produtos são carregados pelo JavaScript. -->
+      </div>
+      <p class="empty-message" id="emptyMessage" hidden>Nenhum produto encontrado. Experimente outra busca ou categoria.</p>
+      <div class="centered-action"><button class="button button-outline" id="showAllProducts">Ver todos os produtos <span aria-hidden="true">→</span></button></div>
+    </section>
+
+    <section class="feature-banner" id="sobre">
+      <div class="feature-photo" role="img" aria-label="Detalhes de maquiagem em tons suaves"></div>
+      <div class="feature-copy"><p class="eyebrow">NOSSA ESSÊNCIA</p><h2>Maquiagem é<br>uma forma de <em>se expressar.</em></h2><p>A Bella Glow acredita que beleza não tem uma única definição. É experimentar, descobrir suas cores favoritas e se sentir bem sendo exatamente quem você é.</p><a href="#produtos" class="text-link">Encontre seu brilho <span aria-hidden="true">↗</span></a></div>
+      <div class="feature-decoration" aria-hidden="true">BG</div>
+    </section>
+
+    <section class="newsletter section-wrap" id="contato">
+      <div><p class="eyebrow">UM TOQUE DE INSPIRAÇÃO</p><h2>Vamos falar de <em>beleza?</em></h2><p>Deixe seu e-mail para receber novidades e inspirações da Bella Glow.</p></div>
+      <form id="newsletterForm" class="newsletter-form">
+        <label class="sr-only" for="emailInput">Seu e-mail</label>
+        <input id="emailInput" name="email" type="email" placeholder="Digite seu melhor e-mail" required>
+        <button class="button button-dark" type="submit">Quero receber <span aria-hidden="true">→</span></button>
+        <small id="newsletterMessage" aria-live="polite">Sem spam. Só novidades bonitas. ♡</small>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark">BG</span><span>Bella <strong>Glow</strong></span></a>
+    <p>Beleza do seu jeito. <span>© <span id="year"></span> Bella Glow.</span></p>
+    <div class="footer-links"><a href="#produtos">Produtos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Sacola de compras" aria-hidden="true">
+    <div class="cart-header"><div><p class="eyebrow">BELLA GLOW</p><h2>Sua sacola</h2></div><button id="closeCart" class="icon-button" aria-label="Fechar sacola">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="cart-empty">Sua sacola está vazia. Que tal escolher um favorito? ✨</p></div>
+    <div class="cart-footer"><div class="cart-total"><span>Total demonstrativo</span><strong id="cartTotal">R$ 0,00</strong></div><button class="button button-dark checkout-button" id="checkoutButton">Finalizar pedido</button><small>Projeto demonstrativo: nenhum pagamento será realizado.</small></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
